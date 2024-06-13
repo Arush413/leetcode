@@ -8,7 +8,8 @@ public:
         long rev = 0;
         bool palindrome;
         if(x<0) palindrome = false;
-        else{
+        else if(x>=0 && x<10) palindrome = true;
+        else if(x>=10){
             while(x>0){
                 rev = rev*10 + x%10;
                 x = x/10;
