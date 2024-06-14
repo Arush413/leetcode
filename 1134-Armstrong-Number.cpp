@@ -17,14 +17,11 @@ public:
         int k = length(x);
         int dupe = x;
         int sum = 0;
-        bool armstrong;
-        if(x<0) armstrong = false;
-        else{
-            while(x>0){
-                int digit = x%10;
-                sum += pow(digit, k);
-                x = x/10;
-            }
+        bool armstrong = false;
+        while(x>0){
+            int digit = x%10;
+            sum += pow(digit, k);
+            x = x/10;
         }
         if(dupe == sum) armstrong = true;
         return armstrong;
